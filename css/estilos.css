@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     
 }
 
@@ -259,6 +260,8 @@ nav .list li{
     list-style: none;
 }
 
+
+
 nav .list a{
     display: block;
     text-transform: uppercase;
@@ -297,6 +300,8 @@ nav .icon-bars .line{
     transition: all .3s ease-in-out;
 }
 
+/*-------------------------------------------Media-Query------------------------------------------------*/
+
 
 @media(max-width: 768px){
     nav .logo{
@@ -306,8 +311,9 @@ nav .icon-bars .line{
     }
 
     nav .list{
+        display: block;
         float: none;
-        position: fixed;
+        position: absolute;
         z-index: 9;
         left: 0;
         right: 0;
@@ -340,18 +346,27 @@ nav .icon-bars .line{
         display: grid;
         grid-template-columns: repeat(4,100%);
         height: 200px;
-        width: 80%;
+        width: 100%;
         animation: slider 30s ease-in-out infinite 
         alternate;
     
     }
 
-    .acerca{
-      top: 50%;
-      position: relative;
-      width: 200px;
-      
+    .container .wrapper{
+        display: flex;
     }
+
+    
+
+    nav{
+        width: 395px;
+        height: 80px;
+    }
+
+    .list a {
+        font-size: 16px;
+        line-height: 1.5;
+      }
     
 
 
@@ -359,57 +374,65 @@ nav .icon-bars .line{
    
 }
 
-@media (max-width: 768px) {
-    .list a {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-  }
+/*-------------------------------------------Final - Media-Query------------------------------------------------*/
+.container .wrapper{
 
+    margin-right: 100px;
 
+}
 
   /** Acerca de mi **/
 
   .fondo2{
     display: block;
     margin-top:25%;
-    width: 100%;
-    height: 30%;
+    width: 20%;
+    height: 50%;
     
   }
   
   .acerca{
     position: relative;
     
-    left: 50%;
+    left: 51%;
     transform: translate(-50%, -50%);
     background-color: #f0f0f0;
+    margin-top:-30px;
+
+    
 
   }
 
 
   .acerca {
-    top:100px;
+    top:130px;
     position: relative;
-    width: 1100px;  /** 550px**/
-    height: 300px;   /**250px **/
+    width: 81%;  /** 550px**/
+    height: 500px;   /**250px **/
     border: 1px solid #ccc;
     align-items: center;
     /*background-image: url(C:/Users/CRISTIAN/Documents/Portafolio-WEB/img/Fondo.jpg); */
     background: black;
-    top:-20px;
+    
     border-radius: 15px;
+    
     
   }
 
 
   .acerca #foto{
-    display: block;
-    position: relative;
-    right: -50px;
-    top: 75px;
+    
+    display:grid;
+    position: inherit;
+    right: -30px;
+    top: 90px;
     border-radius: 5px;
     border: 1px solid #ffffff ;
+    width: 350px;
+    height: 320px;
+
+    
+    
 
 
   }
@@ -417,7 +440,7 @@ nav .icon-bars .line{
   .acerca .yo{
     
     position: absolute;
-    left: 700px;
+    left: 60%;
     top: 100px;
     font-family: "Protest Riot", sans-serif;
     font-weight: 400;
@@ -430,19 +453,19 @@ nav .icon-bars .line{
   .acerca .descripción{
     width: 500px;
     height: 500px;
-    margin-left: 550px;
-    margin-top:-200px;
+    margin-left: 43%;
+    margin-top:-120px;
     font-family: "Protest Riot", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 25px;
     text-align: justify;
     color: #ffffff;
 
   }
 
   .tecnologias{
-    margin-top: 40px;
+    margin-top: -50px;
     position: center;
     margin-left: 1px;
     position: relative;
@@ -456,8 +479,14 @@ nav .icon-bars .line{
     font-weight: 400;
     font-style: normal;
     color:#ffffff;
-    margin-left: 450px;
-    margin-top: -200px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: -20px; 
+    text-align: center; 
+    padding: 20px;
+    
+    
 
   }
 
@@ -503,6 +532,9 @@ nav .icon-bars .line{
     left: 0;
     top: 25%;
 }
+
+
+
 .container-bar a{
     display: block;
     width: 50px;
@@ -630,6 +662,11 @@ nav .icon-bars .line{
     color: white;
     
   }
+
+
+
+
+  
   
 
 
